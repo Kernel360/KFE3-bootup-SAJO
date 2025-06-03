@@ -1,7 +1,11 @@
 {
-  "name": "KFE3-bootup-SAJO",
+  "name": "bootup-sajo",
+  "version": "1.0.0",
+  "description": "Bootup Sajo project with monorepo setup using Turbo and pnpm",
+  "main": "index.js",
   "private": true,
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
@@ -13,7 +17,10 @@
     "turbo": "^2.5.4",
     "typescript": "5.8.2"
   },
-  "packageManager": "pnpm@9.0.0",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1",
   "engines": {
     "node": ">=18"
   }
