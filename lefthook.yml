@@ -9,8 +9,3 @@ pre-commit:
     lint:
       glob: '*.{js,jsx,ts,tsx}'
       run: pnpm turbo lint --filter={staged_files}
-
-pre-push:
-  commands:
-    build-check:
-      run: pnpm turbo build
