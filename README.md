@@ -1,84 +1,37 @@
-# Turborepo starter
+# Bootup 2차
 
-This Turborepo starter is maintained by the Turborepo core team.
+기간 3일 / 인원 5명
 
-## Using this example
+## 2st 4조 동원
 
-Run the following command:
+| [<img src="https://avatars.githubusercontent.com/u/86402215?v=4" width="150" height="150"/>](https://github.com/kwons0) | [<img src="https://avatars.githubusercontent.com/u/31915107?v=4" width="150" height="150"/>](https://github.com/goldegg127) | [<img src="https://avatars.githubusercontent.com/u/69307683?v=4" width="150" height="150"/>](https://github.com/minok9708) |
+| :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
+|                                                         권서영                                                          |                                                           김금란                                                            |                                                           김민옥                                                           |
+|                                          [@kwons0](https://github.com/kwons0)                                           |                                        [@goldegg127](https://github.com/goldegg127)                                         |                                         [@minok9708](https://github.com/minok9708)                                         |
 
-```sh
-npx create-turbo@latest
-```
+| [<img src="https://avatars.githubusercontent.com/u/110523397?v=4" width="150" height="150"/>](https://github.com/haruyam15) | [<img src="https://avatars.githubusercontent.com/u/184901224?v=4" width="150" height="150"/>](https://github.com/hayoon-shin) |
+| :-------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
+|                                                           배하은                                                            |                                                            신하윤                                                             |
+|                                         [@haruyam15](https://github.com/haruyam15)                                          |                                        [@hayoon-shin](https://github.com/hayoon-shin)                                         |
 
-## What's inside?
+<br/>
+<br/>
 
-This Turborepo includes the following packages/apps:
+### 목적:
 
-### Apps and Packages
+- 기존 구조와 컴포넌트 구조 분석
+- 개선되어야할 점 취합
+- 변경 및 개선 진행
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+### 진행 흐름:
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+1. 기존 구조 분석
+   - 1-1. Monorepo + FSD(Feature Sliced Design) 구조 분석
+   - 1-2. FSD 아키텍처 사용 여부에 대한 논의
+2. 변경 및 개선 진행
+   - 2-1. FSD 아키텍처
+     - 2-1-1. 기존 프로젝트의 폴더 구조 변경
+     - 2-1-2. 진입 장벽이 높은 아키텍처 구조를 보안하고자 온보딩 가이드 생성
+       - [🔗 FSD 온보딩 가이드 바로가기](https://www.notion.so/FSD-Onboarding-Guide-20ea3f519ab88010a4c2faf71acf5ac0?source=copy_link)
+     - storybook 디렉토리 위치 변경
+   - 2-2. 컴포넌트 리팩토링
