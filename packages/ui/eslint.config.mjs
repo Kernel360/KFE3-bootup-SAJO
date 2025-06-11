@@ -7,10 +7,10 @@
 // export default config;
 import storybook from 'eslint-plugin-storybook';
 import { defineConfig } from 'eslint/config';
+import reactInternal from '../eslint-config/react-internal.js';
 
 export default defineConfig([
-  {
-    extends: '@repo/eslint-config/react-internal.js',
-    ...storybook.configs['flat/recommended'],
-  },
+  ...reactInternal, // ← 가장 먼저 적용
+  // Storybook 추천 규칙 (배열 형태)
+  ...storybook.configs['flat/recommended'],
 ]);

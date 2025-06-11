@@ -41,6 +41,7 @@
     "vitest": "^3.2.2"
   },
   "dependencies": {
+    "@storybook/react": "^9.0.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0"
