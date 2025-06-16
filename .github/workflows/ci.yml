@@ -23,7 +23,9 @@ jobs:
           cache: 'pnpm'
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: |
+          npm install -g pnpm
+          pnpm --version
 
       # 2. 캐시 세팅
       - name: Get pnpm store directory
