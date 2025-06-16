@@ -9,9 +9,7 @@
     "./react-internal": "./react-internal.js",
     ".": "./index.js"
   },
-  "scripts": {
-    "lint": "eslint . --max-warnings 0"
-  },
+  "scripts": {},
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.20.1",
     "@typescript-eslint/parser": "^8.20.1",
