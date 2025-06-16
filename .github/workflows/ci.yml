@@ -22,10 +22,10 @@ jobs:
           node-version: 20
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: |
-          npm install -g pnpm
-          pnpm --version
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+      - run: pnpm install
 
       # 2. 캐시 세팅
       - name: Get pnpm store directory
