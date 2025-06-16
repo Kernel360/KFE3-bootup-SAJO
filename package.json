@@ -6,19 +6,45 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "turbo run build",
+    "build": "cross-env NODE_OPTIONS=\"--max-old-space-size=4096\" next build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,yml,yaml}\"",
     "clean": "turbo clean",
-    "check-types": "turbo run check-types",
+    "check-types": "tsc --noEmit",
     "prepare": "lefthook install",
     "hooks:install": "lefthook install",
-    "hooks:uninstall": "lefthook uninstall"
+    "hooks:uninstall": "lefthook uninstall",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.29.0",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/ui": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.2.0",
+    "next": "^15.3.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^10.1.1",
+    "@repo/eslint-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "eslint-config-prettier": "^10.1.5",
     "lefthook": "^1.11.13",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
@@ -31,5 +57,9 @@
   "packageManager": "pnpm@10.11.1",
   "engines": {
     "node": ">=18"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

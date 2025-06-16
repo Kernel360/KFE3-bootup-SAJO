@@ -1,0 +1,88 @@
+# .github/workflows/ci.yml
+name: CI (FSD + Supabase/Prisma)
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Git 체크아웃 & 노드 세팅
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # 2. 캐시 세팅
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # 3. Turbo 캐시 세팅(옵션)
+      - name: Turbo Cache
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
+
+      # 4. 프론트엔드(FSD) 각 계층별 검사
+      - name: Lint (all)
+        run: pnpm turbo lint
+
+      - name: Typecheck (all)
+        run: pnpm turbo typecheck
+
+      - name: Test (all)
+        run: pnpm turbo test
+
+      - name: Build (all)
+        run: pnpm turbo build
+
+      - name: Build Storybook (ui)
+        run: pnpm --filter=ui build-storybook
+
+    #   # 5. 백엔드 (Supabase, Prisma)
+    #   # Prisma 스키마 검증
+    #   - name: Prisma Format & Validate
+    #     run: |
+    #       cd backend/prisma
+    #       pnpm prisma format
+    #       pnpm prisma validate
+
+    #   # (필요시) Prisma 마이그레이션 테스트용 DB 준비
+    #   - name: Prisma Migrate Check (optional)
+    #     run: |
+    #       cd backend/prisma
+    #       pnpm prisma migrate diff --from-empty --to-schema-datamodel schema.prisma
+
+    #   # Supabase functions 테스트, lint 등(선택)
+    #   - name: Supabase Functions Lint/Test (optional)
+    #     run: |
+    #       cd backend/supabase
+    #       pnpm lint
+    #       pnpm test

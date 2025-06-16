@@ -5,6 +5,9 @@
   "exports": {
     ".": "./tailwind.config.ts"
   },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0"
+  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "tailwindcss": "^3.4.0"
