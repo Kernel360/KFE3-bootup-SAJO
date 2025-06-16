@@ -20,8 +20,8 @@ jobs:
       - uses: pnpm/action-setup@v3
         with:
           version: 8
-      - run: pnpm install
 
+      # pnpm 캐시 세팅 (install 전에!)
       - name: Get pnpm store directory
         id: pnpm-cache
         run: echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
@@ -52,23 +52,20 @@ jobs:
       - name: Build Storybook (ui)
         run: pnpm --filter=ui build-storybook
 
-    #   # 5. 백엔드 (Supabase, Prisma)
-    #   # Prisma 스키마 검증
-    #   - name: Prisma Format & Validate
-    #     run: |
-    #       cd backend/prisma
-    #       pnpm prisma format
-    #       pnpm prisma validate
+      # Prisma, Supabase 백엔드 Step (주석 해제시)
+      # - name: Prisma Format & Validate
+      #   run: |
+      #     cd backend/prisma
+      #     pnpm prisma format
+      #     pnpm prisma validate
 
-    #   # (필요시) Prisma 마이그레이션 테스트용 DB 준비
-    #   - name: Prisma Migrate Check (optional)
-    #     run: |
-    #       cd backend/prisma
-    #       pnpm prisma migrate diff --from-empty --to-schema-datamodel schema.prisma
+      # - name: Prisma Migrate Check (optional)
+      #   run: |
+      #     cd backend/prisma
+      #     pnpm prisma migrate diff --from-empty --to-schema-datamodel schema.prisma
 
-    #   # Supabase functions 테스트, lint 등(선택)
-    #   - name: Supabase Functions Lint/Test (optional)
-    #     run: |
-    #       cd backend/supabase
-    #       pnpm lint
-    #       pnpm test
+      # - name: Supabase Functions Lint/Test (optional)
+      #   run: |
+      #     cd backend/supabase
+      #     pnpm lint
+      #     pnpm test
