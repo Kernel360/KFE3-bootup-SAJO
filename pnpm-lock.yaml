@@ -21,9 +21,6 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:packages/eslint-config
-      '@tailwindcss/postcss':
-        specifier: ^4.1.8
-        version: 4.1.10
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.32
@@ -118,9 +115,6 @@ importers:
 
   apps/web:
     dependencies:
-      '@radix-ui/react-slot':
-        specifier: ^1.2.3
-        version: 1.2.3(@types/react@19.1.0)(react@19.1.0)
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
