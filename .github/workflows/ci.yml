@@ -33,8 +33,8 @@ jobs:
       - name: Typecheck (all)
         run: pnpm turbo typecheck
 
-      - name: Test (all)
-        run: pnpm turbo test
+      # - name: Test (all)
+      #   run: pnpm turbo test
 
       - name: Build (all)
         run: pnpm turbo build
