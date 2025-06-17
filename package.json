@@ -18,12 +18,23 @@
     "hooks:uninstall": "lefthook uninstall"
   },
   "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.34.0",
+    "@typescript-eslint/parser": "^8.34.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.4.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-turbo": "1.12.1",
+    "globals": "^16.2.0",
     "lefthook": "^1.11.13",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "turbo": "^2.5.4",
-    "typescript": "5.8.2"
+    "typescript": "5.5.2",
+    "typescript-eslint": "^8.34.0"
   },
   "keywords": [],
   "author": "",
