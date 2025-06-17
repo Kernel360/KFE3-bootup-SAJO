@@ -218,6 +218,12 @@ importers:
 
   packages/eslint-config:
     dependencies:
+      '@eslint/js':
+        specifier: ^9.29.0
+        version: 9.29.0
+      '@next/eslint-plugin-next':
+        specifier: ^15.3.3
+        version: 15.3.3
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.20.1
         version: 8.34.0(@typescript-eslint/parser@8.34.0(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2))(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2)
@@ -243,12 +249,6 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3.3.1
         version: 3.3.1
-      '@eslint/js':
-        specifier: ^9.28.0
-        version: 9.29.0
-      '@next/eslint-plugin-next':
-        specifier: ^15.3.0
-        version: 15.3.3
       eslint:
         specifier: ^9.28.0
         version: 9.29.0(jiti@2.4.2)

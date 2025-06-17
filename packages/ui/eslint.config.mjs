@@ -5,12 +5,18 @@
 
 // /** @type {import("eslint").Linter.Config} */
 // export default config;
-import storybook from 'eslint-plugin-storybook';
-import { defineConfig } from 'eslint/config';
-import reactInternal from '../eslint-config/react-internal.js';
+import baseConfig from '@repo/eslint-config/react-internal.js';
 
-export default defineConfig([
-  ...reactInternal, // ← 가장 먼저 적용
-  // Storybook 추천 규칙 (배열 형태)
-  ...storybook.configs['flat/recommended'],
-]);
+/** @type {import("eslint").Linter.Config[]} */
+export default [
+  {
+    ignores: [
+      'node_modules/**',
+      'dist/**',
+      'build/**',
+      'storybook-static/**', // Storybook 빌드 파일 제외
+      '.storybook/main.ts', // Storybook 설정 파일도 제외 가능
+    ],
+  },
+  ...baseConfig,
+];

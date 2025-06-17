@@ -60,3 +60,6 @@ export const nextJsConfig = [
     },
   },
 ];
+
+// Default export 추가
+export default nextJsConfig;
