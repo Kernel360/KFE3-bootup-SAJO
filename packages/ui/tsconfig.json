@@ -1,4 +1,8 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "NodeNext"
+  },
   "extends": "@repo/typescript-config/base.json",
   "include": [
     "src/**/*",

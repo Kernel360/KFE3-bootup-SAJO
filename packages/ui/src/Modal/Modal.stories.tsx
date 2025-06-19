@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { Button } from '../Button/Button.jsx';
-import { Modal, type ModalProps } from './Modal.jsx';
+import { Modal, type ModalProps } from './Modal.js';
 // React Icons 예시
 import { FiAlertTriangle, FiCheckCircle, FiClock, FiHeart, FiMapPin, FiStar } from 'react-icons/fi';
 
@@ -446,34 +446,37 @@ export const AccessibilityTest: Story = {
   },
 };
 
+// 컴포넌트로 분리
+const InteractiveModal = () => {
+  const [result, setResult] = useState('');
+
+  return (
+    <div className="space-y-4">
+      <ModalWrapper
+        title="인터랙티브 테스트"
+        confirmText="확인"
+        cancelText="취소"
+        onConfirm={() => setResult('✅ 확인 버튼이 클릭되었습니다!')}
+        onCancel={() => setResult('❌ 취소 버튼이 클릭되었습니다!')}
+      >
+        <p className="text-body">
+          버튼을 클릭하여 모달의 동작을 테스트해보세요.
+          <br />
+          결과가 아래에 표시됩니다.
+        </p>
+      </ModalWrapper>
+
+      {result && (
+        <div className="rounded-lg bg-[var(--color-main-lightest)] p-4">
+          <p className="text-body text-[var(--color-main-text)]">{result}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
 export const Interactive: Story = {
-  render: () => {
-    const [result, setResult] = useState('');
-
-    return (
-      <div className="space-y-4">
-        <ModalWrapper
-          title="인터랙티브 테스트"
-          confirmText="확인"
-          cancelText="취소"
-          onConfirm={() => setResult('✅ 확인 버튼이 클릭되었습니다!')}
-          onCancel={() => setResult('❌ 취소 버튼이 클릭되었습니다!')}
-        >
-          <p className="text-body">
-            버튼을 클릭하여 모달의 동작을 테스트해보세요.
-            <br />
-            결과가 아래에 표시됩니다.
-          </p>
-        </ModalWrapper>
-
-        {result && (
-          <div className="rounded-lg bg-[var(--color-main-lightest)] p-4">
-            <p className="text-body text-[var(--color-main-text)]">{result}</p>
-          </div>
-        )}
-      </div>
-    );
-  },
+  render: () => <InteractiveModal />, // 컴포넌트 사용
   args: {
     children: '인터랙티브 테스트 내용',
     title: '인터랙티브 테스트',
