@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
 import { Button } from '../Button/Button.jsx';
-import { Modal, type ModalProps } from './Modal.jsx';
+import { Modal, type ModalProps } from './Modal.js';
 // React Icons 예시
 import { FiAlertTriangle, FiCheckCircle, FiClock, FiHeart, FiMapPin, FiStar } from 'react-icons/fi';
 
