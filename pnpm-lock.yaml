@@ -82,6 +82,7 @@ importers:
         specifier: ^8.34.0
         version: 8.34.1(eslint@8.57.0)(typescript@5.5.2)
 
+<<<<<<< HEAD
   apps/docs:
     dependencies:
       '@radix-ui/react-slot':
@@ -143,6 +144,8 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
 
+=======
+>>>>>>> 5da5a865090fdd695dccdcd7cfda41b8c0b6d102
   apps/web:
     dependencies:
       '@repo/ui':
@@ -199,6 +202,7 @@ importers:
         version: 9.29.0
       '@next/eslint-plugin-next':
         specifier: ^15.3.3
+<<<<<<< HEAD
         version: 15.3.4
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.34.0
@@ -228,6 +232,18 @@ importers:
       eslint-import-resolver-typescript:
         specifier: ^3.6.1
         version: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.29.0(jiti@2.4.2))
+=======
+        version: 15.3.3(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.2)
+      eslint-config-prettier:
+        specifier: ^10.1.1
+        version: 10.1.5(eslint@9.28.0(jiti@2.4.2))
+      eslint-import-resolver-typescript:
+        specifier: ^3.6.1
+        version: 3.10.1(eslint-plugin-import@2.31.0)(eslint@9.28.0(jiti@2.4.2))
+      eslint-plugin-import:
+        specifier: ^2.31.0
+        version: 2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
+>>>>>>> 5da5a865090fdd695dccdcd7cfda41b8c0b6d102
       eslint-plugin-only-warn:
         specifier: ^1.1.0
         version: 1.1.0
@@ -6251,7 +6267,11 @@ snapshots:
       tinyglobby: 0.2.14
       unrs-resolver: 1.9.0
     optionalDependencies:
+<<<<<<< HEAD
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.29.0(jiti@2.4.2))
+=======
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.34.0(eslint@9.28.0(jiti@2.4.2))(typescript@5.8.2))(eslint-import-resolver-typescript@3.10.1)(eslint@9.28.0(jiti@2.4.2))
+>>>>>>> 5da5a865090fdd695dccdcd7cfda41b8c0b6d102
     transitivePeerDependencies:
       - supports-color
 
@@ -6292,7 +6312,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+<<<<<<< HEAD
   eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.1(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@4.4.3)(eslint@8.57.0):
+=======
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.34.0(eslint@8.57.0)(typescript@5.5.2))(eslint-import-resolver-typescript@4.4.3)(eslint@8.57.0):
+>>>>>>> 5da5a865090fdd695dccdcd7cfda41b8c0b6d102
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -6350,7 +6374,11 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
+<<<<<<< HEAD
   eslint-plugin-jsx-a11y@6.10.2(eslint@9.29.0(jiti@2.4.2)):
+=======
+  eslint-plugin-jsx-a11y@6.10.2(eslint@9.28.0(jiti@2.4.2)):
+>>>>>>> 5da5a865090fdd695dccdcd7cfda41b8c0b6d102
     dependencies:
       aria-query: 5.3.2
       array-includes: 3.1.9
