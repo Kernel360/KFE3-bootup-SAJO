@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
-    "./*": "./src/*.tsx"
+    "./*": "./src/*.tsx",
+    "./Button/Button": "./src/Button/Button.tsx"
   },
   "type": "module",
   "scripts": {
