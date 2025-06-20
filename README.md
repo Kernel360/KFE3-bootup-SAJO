@@ -1,18 +1,21 @@
-# Bootup 2차
+# E2E
 
-기간 3일 / 인원 5명
+기간 2025.6.12(목) ~ 2025.7.5(토), 21일 / 인원 5명
 
 ## 2st 4조 동원
 
-| [<img src="https://avatars.githubusercontent.com/u/86402215?v=4" width="150" height="150"/>](https://github.com/kwons0) | [<img src="https://avatars.githubusercontent.com/u/31915107?v=4" width="150" height="150"/>](https://github.com/goldegg127) | [<img src="https://avatars.githubusercontent.com/u/69307683?v=4" width="150" height="150"/>](https://github.com/minok9708) |
+| [<img src="https://avatars.githubusercontent.com/u/86402215?v=4" width="150" height="150"/>](https://github.com/kwons0) | [<img src="https://avatars.githubusercontent.com/u/31915107?v=4" width="150" height="150"/>](https://github.com/minok9708) | [<img src="https://avatars.githubusercontent.com/u/69307683?v=4" width="150" height="150"/>](https://github.com/haruyam15) |
 | :---------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------: |
-|                                                         권서영                                                          |                                                           김금란                                                            |                                                           김민옥                                                           |
-|                                          [@kwons0](https://github.com/kwons0)                                           |                                        [@goldegg127](https://github.com/goldegg127)                                         |                                         [@minok9708](https://github.com/minok9708)                                         |
+|                                                         권서영                                                          |                                                           김민옥                                                            |                                                           배하은                                                           |
+|                                          [@kwons0](https://github.com/kwons0)                                           |                                        [@minok9708](https://github.com/minok9708)                                         |                                         [@haruyam15](https://github.com/haruyam15)                                         |
 
-| [<img src="https://avatars.githubusercontent.com/u/110523397?v=4" width="150" height="150"/>](https://github.com/haruyam15) | [<img src="https://avatars.githubusercontent.com/u/184901224?v=4" width="150" height="150"/>](https://github.com/hayoon-shin) |
+| [<img src="https://avatars.githubusercontent.com/u/110523397?v=4" width="150" height="150"/>](https://github.com/hayoon-shin) | [<img src="https://avatars.githubusercontent.com/u/184901224?v=4" width="150" height="150"/>](https://github.com/choiyoungae) |
 | :-------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
-|                                                           배하은                                                            |                                                            신하윤                                                             |
-|                                         [@haruyam15](https://github.com/haruyam15)                                          |                                        [@hayoon-shin](https://github.com/hayoon-shin)                                         |
+|                                                           신하윤                                                            |                                                            최영애                                                             |
+|                                         [@hayoon-shin](https://github.com/hayoon-shin)                                          |                                        [@choiyoungae](https://github.com/choiyoungae)                                         |
+
+
+
 
 <br/>
 <br/>
